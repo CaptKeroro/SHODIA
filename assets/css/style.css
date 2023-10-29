@@ -1,0 +1,435 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400&display=swap');
+
+/* * {
+  font-family: 'Quicksand';
+} */
+
+/* body {
+  height: 100vh;
+  overflow: hidden;
+} */
+
+header {
+  position: fixed;
+  width: 100%;
+  z-index: 9999;
+}
+
+header span {
+  font-size: 12px;
+}
+
+.item-header-1 {
+  padding: 8px 32px;
+  background-color: #f0f3f7;
+}
+
+header .item-header-1 span {
+  color: #6d7588;
+}
+
+header .item-header-1 span:hover {
+  color: #ff4500;
+  cursor: pointer;
+}
+
+header .item-header-1 img {
+  width: 14px;
+}
+
+.item-header-2 {
+  padding: 8px 32px;
+  background-color: #fff;
+  box-shadow: rgba(0, 0, 0, 0.07) 0px 4px 6px -1px;
+}
+
+.item-header-2 .img-shodia {
+  width: 185px;
+  height: 36px;
+}
+
+.item-header-2 .text-kategori {
+  padding: 2px 5px;
+  font-size: medium;
+  color: #212121;
+}
+
+.item-header-2 .text-kategori:hover {
+  background-color: #f3f4f5 !important;
+  cursor: pointer !important;
+  color: #ff4500;
+  border-radius: 5px;
+}
+
+.item-header-2 span {
+  color: #6d7488;
+}
+
+.item-header-2 .icon-search, .item-header-2 .icon-shop {
+  width: 18px;
+}
+
+.wrap-search {
+  position: relative;
+  background-color:#fff;
+  width: 100%;
+  height: 35px;
+}
+
+.item-header-2 .wrap-search .form-control {
+  background-color: transparent;
+  position: absolute;
+  width: 100%;
+  overflow: hidden;
+  border: 1px solid #cdcdcd;
+  z-index: 1;
+}
+
+.item-header-2 .wrap-search .form-control::placeholder {
+  color: #cdcdcd;
+  font-size: 14px;
+}
+
+.item-header-2 .wrap-search .form-control:focus {
+  box-shadow: none;
+  border: 1px solid #ff4500;
+}
+
+.item-header-2 .wrap-search .wrap-icon-search {
+  background-color: #f3f4f5;
+  position: absolute;
+  right: 0;
+  width: 4%;
+  height: 100%;
+}
+
+.item-header-2 .wrap-search .wrap-icon-search .icon-search {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.item-header-2 .wrap-icon-shop {
+  position: relative;
+  background-color: transparent;
+  height: max-content;
+  width: max-content;
+  padding: 0px 8px 5px 8px;
+  border-radius: 3px;
+  transition-duration: 0.5s;
+}
+
+.item-header-2 .wrap-icon-shop:hover {
+  background-color: #cdcdcd;
+  cursor: pointer;
+}
+
+.line {
+  font-size: 26px;
+  color: #e4ebf5;
+  margin-bottom: 8px;
+  font-weight: 100;
+}
+
+header .btn {
+  border-radius: 8px;
+  font-size: 13px;
+  background-color: #ff4500;
+}
+
+header .btn:first-child {
+  background-color: #fff;
+  color: #ff4500;
+  border: 1px solid #ff4500;
+}
+
+header .btn:last-child {
+  background-color: #ff4500;
+  color: #fff;
+}
+
+.text-under-search {
+  margin-left: 20%;
+  font-size: 12px;
+}
+
+.text-under-search span:hover {
+  color: #ff4500;
+  cursor: pointer;
+}
+
+.menu-bar {
+  display: flex;
+  position: absolute;
+  right: 35px;
+  top: 91px;
+  background-color: #fff;
+  -webkit-box-shadow: 0px -1px 9px 0px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 0px -1px 0px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px -1px 9px 0px rgba(0, 0, 0, 0.1);
+  padding: 10px 30px;
+  border-radius: 12px;
+  width: 470px;
+  visibility: hidden;
+  transition: 0.1s;
+  transform: rotateX(-75deg);
+  z-index: 999999;
+}
+
+.menuBarStyle {
+  visibility: visible;
+  transform: rotateX(0deg);
+  transform-origin: 0%;
+}
+
+.menu-bar {
+  text-align: center;
+}
+
+.menu-bar h4 {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.menu-bar p {
+  font-size: 14px;
+  color: #31353bad;
+}
+
+.menu-bar button {
+  color: #fff;
+  font-size: 20px;
+  font-weight: bold;
+  width: 50%;
+  justify-content: center;
+  padding: none;
+  
+}
+
+.menu-bar button:hover {
+  cursor: pointer;
+  color: #fff;
+}
+
+.menu-bar img {
+  width: 30%;
+}
+
+#overlay {
+  position: fixed;
+  display: none;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 2;
+  cursor: pointer;
+}
+
+.overlayStyle {
+  display: block !important;
+}
+
+.modal {
+  z-index: 9999;
+}
+
+.modal-content {
+  top: 60px;
+  right: 147px;
+  padding: 19px;
+  width: 150%;
+  border-radius: 0;
+  border: none;
+}
+
+.m-c-head .btn {
+  color: #ff4500;
+  border: 1px solid #ff4500;
+  background: transparent;
+  border-radius: 20px;
+}
+
+.m-c-head span {
+  color: #6d7588;
+}
+
+.m-c-head .title {
+  color: #212121;
+}
+
+
+/* KATOGERI */
+.kategori {
+  display: flex;
+  flex-direction: column;
+  display: none;
+  z-index: 99999;
+}
+
+.kategoriStyle {
+  display: block;
+}
+
+.head-kategori {
+  font-size: 15px;
+  width: 100%;
+  /* overflow-y: scroll; */
+  position: fixed;
+  top: 123px;
+  z-index: 99999;
+  border: 1px solid #cdcdcd;
+  background-color: #fff;
+  padding-left: 2%;
+}
+
+.head-kategori span {
+  padding: 10px 30px;
+  border-bottom: 2px solid transparent;
+  color: #969696;
+}
+
+.head-kategori span:hover {
+  padding: 10px 30px;
+  border-bottom: 2px solid #ff4500;
+  color: #ff4500;
+  cursor: pointer;
+}
+
+.head-left {
+  overflow-y: scroll;
+  height: 100vh;
+  padding-top: 180px;
+  padding-left: 35px;
+}
+
+.head-left h6 {
+  font-weight: bold;
+  font-size: 12px;
+  padding: 10px 0 10px 10px;
+  border-radius: 4px;
+  margin-right: 10px;
+}
+
+.head-left h6:hover {
+  background-color: gainsboro;
+  /* background-color: #ff4500; */
+  cursor: pointer;
+  /* color: #fff; */
+  color: #121212;
+}
+
+.head-right {
+  overflow-y: scroll;
+  height: 100vh;
+  padding-top: 180px;
+  padding-left: 35px;
+}
+
+.head-right h5 {
+  font-weight: bold;
+}
+
+.head-right h6 {
+  font-weight: normal;
+}
+
+.head-right h5:hover, h6:hover {
+  color: #ff4500;
+  cursor: pointer;
+}
+
+/* carousel style*/
+.carousel {
+  position: relative;
+  top: 136px;
+}
+
+.carousel-inner {
+  width: 95%;
+  border-radius: 12px;
+}
+
+.carousel-indicators {
+  margin-left: 8%;
+  justify-content: left;
+}
+
+.carousel-indicators button {
+  border-top: 0;
+  border-bottom: 0;
+}
+
+/* KATEGORI PILIHAN */
+.kategori-pilihan {
+  position: relative;
+  top: 160px; 
+  margin: 8px 40px;
+  box-shadow: rgba(49,53, 59, 0.12) 0px 1px 6px;
+  background-color: #fff;
+  padding: 16px;
+  border-radius: 12px;
+}
+
+.carousel-2 {
+  position: relative;
+  top: 0;
+}
+
+.card-kategori {
+  border: 1px solid #dfdfdf;
+  border-radius: 10px;
+  max-width: 200px;
+  min-width: 100px;
+}
+
+.kategori-pilihan h1 {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.kategori-pilihan h2 {
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.kategori-pilihan h3 {
+  font-size: 14px;
+  font-weight: 400;
+  text-align: center;
+}
+
+.item-menu {
+  padding: 10px 0;
+  border: 2px solid transparent;
+}
+
+.item-menu:hover {
+  border-bottom: 2px solid #ff4500;
+  color: #ff4500;
+}
+
+.font-weight {
+  font-weight: bold;
+}
+
+.carousel-inner-2 {
+  width: 100%;
+}
+
+.menu-scroll {
+  overflow-x: scroll;
+}
+
+.menu-scroll::-webkit-scrollbar {
+  display: none;
+}
+
+.item-scroll {
+  border-radius: 14px;
+}

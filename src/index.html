@@ -1,0 +1,567 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Shodia - Situs Belanja Online Terlengkap di Indonesia</title>
+  <link rel="shortcut icon" href="/assets/images/logo/shodia-logo.png" type="image/x-icon">
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <!-- Bootstrap ICON -->
+  <link rel="stylesheet" href="/node_modules/bootstrap-icons/font/bootstrap-icons.css">
+  <!-- CSS -->
+  <link rel="stylesheet" href="/assets/css/style.css">
+</head>
+
+<body>
+  <div id="overlay"></div>
+
+  <!-- Navbar -->
+  <header>
+    <!-- Header 1 -->
+    <div class="item-header-1 d-flex justify-content-between align-items-center">
+      <div class="d-flex align-items-center">
+        <img class="me-2" src="/assets/images/icon/phone-portrait-outline.svg" alt="logo hp">
+        <span>Download Shodia App</span>
+      </div>
+
+      <div class="d-flex">
+        <span class="me-4">Tentang Shodia</span>
+        <span class="me-4">Mitra Shodia</span>
+        <span class="me-4">Mulai Berjualan</span>
+        <span class="me-4">Promo</span>
+        <span class="me-4">Shodia Care</span>
+      </div>
+    </div>
+    <!-- Akhir Header 1 -->
+
+    <!-- Header 2 -->
+    <div class="item-header-2 d-flex flex-column">
+
+      <!-- LOGO dan Kategori -->
+      <div class="d-flex justify-content-between align-items-center">
+        <img class="img-shodia" src="/assets/images/logo/brunch (3).png">
+        <span class="mx-2 text-kategori" onclick="kategoriOn()">Kategori</span>
+        <!-- Akhir LOGO dan Kategori-->
+
+        <!-- Menu Pencarian -->
+        <div class="wrap-search">
+          <input type="text" class="form-control" placeholder="Cari di Shodia" alt="logo shodia" data-bs-toggle="modal"
+            data-bs-target="#exampleModal">
+          <div class="wrap-icon-search">
+            <i class="icon-search bi bi-search"></i>
+          </div>
+        </div>
+        <!-- Akhir Menu Pencarian -->
+
+        <!-- Button Shop -->
+        <div class="wrap-icon-shop mx-3" onclick="on()">
+          <i class="icon-shop bi bi-cart2"></i>
+        </div>
+        <!-- Akhir Button Shop -->
+
+        <!-- Garis Vertikal -->
+        <span class="line mr-3 me-3">|</span>
+        <!-- Akhir Garis Vertikal -->
+
+        <!-- Button Masuk dan Daftar -->
+        <div class="d-flex">
+          <button class="btn fw-bold me-xxl-2">Masuk</button>
+          <button class="btn fw-bold">Daftar</button>
+        </div>
+        <!-- Akhir Button Masuk dan Daftar -->
+      </div>
+
+      <!-- Teks Dibawah Tombol Pencarian -->
+      <div class="text-under-search d-flex mt-2">
+        <span class="me-3">Ralph Lauren</span>
+        <span class="me-3">Stone Island</span>
+        <span class="me-3">Erigo</span>
+        <span class="me-3">Arnold Palmer</span>
+        <span class="me-3">Lacoste</span>
+        <span class="me-3">Tommy Hilfiger</span>
+      </div>
+      <!-- Akhir Text DIbawah Tombol Pencarian -->
+
+    </div>
+    <!-- Akhir Header 2 -->
+
+    <!-- Menu Bar -->
+    <div class="menu-bar flex-column justify-content-between align-item-center" id="menuBar">
+      <img class="mx-auto" src="/assets/images/animations/keranjang-kosong.jpg" alt="keranjang-kosong">
+      <h4 class="mt-2 text-center fw-bold">Wah keranjang belanjaanmu kosong</h4>
+      <p>Daripada dianggurin, isi saja dengan barang-barang menarik.
+        <br>Lihat-lihat dulu, siapa tahu ada yang kamu suka!
+      </p>
+      <button class="btn mx-auto">Lihat Rekomendasi</button>
+    </div>
+    <!-- Akhir Menu Bar -->
+  </header>
+  <!-- Akhir Headaer -->
+
+  <!-- Kategori -->
+  <!-- WARNING -->
+  <!-- ini bisa di benerin agar setiap pindah (misalnya) dari Belanja ke fitured agar isi konten pada head right
+        berubah mengikuti isi konten yang ada pada head left, contohnya bisa di liat pada website tokotpedia
+  -->
+  <!-- WARNING -->
+  <div class="kategori" id="kategori">
+    <div class="head-kategori d-flex w-100">
+      <span>Belanja</span>
+      <span>Featured</span>
+      <span>Kebutuhan&nbsp;Harian</span>
+      <!-- <span>Brand&nbsp;Unggulan</span> -->
+      <span>Tagihan</span>
+      <span>Top&nbsp;-&nbsp;Up</span>
+      <span>Shodia&nbsp;Keuangan</span>
+      <span>Pajak&nbsp;&&nbsp;Pendidikan</span>
+      <span>Travle&nbsp;&&nbsp;Entertainment</span>
+      <!-- <span>Halal&nbsp;Corner</span> -->
+      <span>Lain&nbsp;-&nbsp;Lain</span>
+    </div>
+    <div class="row">
+      <div class="col-2">
+        <div class="head-left">
+          <h6 class="mb-0">Rumah Tangga</h6>
+          <h6 class="mb-0">Audio, Kamera & Elektronik Lainnya</h6>
+          <h6 class="mb-0">Buku</h6>
+          <h6 class="mb-0">Dapur</h6>
+          <h6 class="mb-0">Elektronik</h6>
+          <h6 class="mb-0">Fashion Anak & Bayi</h6>
+          <h6 class="mb-0">Fashion Muslim</h6>
+          <h6 class="mb-0">Fashion Pria</h6>
+          <h6 class="mb-0">Fashion Wanita</h6>
+          <h6 class="mb-0">Film & Musik</h6>
+          <h6 class="mb-0">Gaming</h6>
+          <h6 class="mb-0">Handphone & Tablet</h6>
+          <h6 class="mb-0">Ibu & Bayi</h6>
+          <h6 class="mb-0">Kecantikan</h6>
+          <h6 class="mb-0">Kesehatan</h6>
+          <h6 class="mb-0">Komputer & Laptop</h6>
+          <h6 class="mb-0">Logam Mulia</h6>
+          <h6 class="mb-0">Mainan & Hobi</h6>
+          <h6 class="mb-0">Makanan & Minuman</h6>
+          <h6 class="mb-0">Office & Stationery</h6>
+          <h6 class="mb-0">Olahraga</h6>
+          <h6 class="mb-0">Otomotif</h6>
+          <h6 class="mb-0">Perawatan Hewan</h6>
+          <h6 class="mb-0">Perawatan Tubuh</h6>
+          <h6 class="mb-0">Perlengkapan Pesta</h6>
+          <h6 class="mb-0">Pertukangan</h6>
+          <h6 class="mb-0">Produk Lainnya</h6>
+          <h6 class="mb-0">Properti</h6>
+          <h6 class="mb-0">Tiket, Travel, Voucher</h6>
+          <h6 class="mb-0">Wedding</h6>
+        </div>
+      </div>
+      <div class="col-10">
+        <div class="head-right">
+          <div class="w-100 d-flex align-content-center">
+            <i class="house bi bi-house-fill" style="font-size: 50px; color: #ff4500;"></i>
+            <span class="h4 m-2 p-3 fw-bold">Rumah Tangga</span>
+          </div>
+          <div class="row mt-5">
+            <div class="col-3">
+              <h5>Title</h5>
+              <h6>Deskripsi</h6>
+              <h6>Deskripsi</h6>
+              <h6>Deskripsi</h6>
+              <h6>Deskripsi</h6>
+              <h6>Deskripsi</h6>
+              <h6>Deskripsi</h6>
+            </div>
+            <div class="col-3">
+              <h5>Title</h5>
+              <h6>Deskripsi</h6>
+              <h6>Deskripsi</h6>
+              <h6>Deskripsi</h6>
+              <h6>Deskripsi</h6>
+              <h6>Deskripsi</h6>
+              <h6>Deskripsi</h6>
+            </div>
+            <div class="col-3">
+              <h5>Title</h5>
+              <h6>Deskripsi</h6>
+              <h6>Deskripsi</h6>
+              <h6>Deskripsi</h6>
+              <h6>Deskripsi</h6>
+              <h6>Deskripsi</h6>
+              <h6>Deskripsi</h6>
+            </div>
+            <div class="col-3">
+              <h5>Title</h5>
+              <h6>Deskripsi</h6>
+              <h6>Deskripsi</h6>
+              <h6>Deskripsi</h6>
+              <h6>Deskripsi</h6>
+              <h6>Deskripsi</h6>
+              <h6>Deskripsi</h6>
+            </div>
+          </div>
+          <div class="row mt-5">
+            <div class="col-3">
+              <h5>Title</h5>
+              <h6>Deskripsi</h6>
+              <h6>Deskripsi</h6>
+              <h6>Deskripsi</h6>
+              <h6>Deskripsi</h6>
+              <h6>Deskripsi</h6>
+              <h6>Deskripsi</h6>
+            </div>
+            <div class="col-3">
+              <h5>Title</h5>
+              <h6>Deskripsi</h6>
+              <h6>Deskripsi</h6>
+              <h6>Deskripsi</h6>
+              <h6>Deskripsi</h6>
+              <h6>Deskripsi</h6>
+              <h6>Deskripsi</h6>
+            </div>
+            <div class="col-3">
+              <h5>Title</h5>
+              <h6>Deskripsi</h6>
+              <h6>Deskripsi</h6>
+              <h6>Deskripsi</h6>
+              <h6>Deskripsi</h6>
+              <h6>Deskripsi</h6>
+              <h6>Deskripsi</h6>
+            </div>
+            <div class="col-3">
+              <h5>Title</h5>
+              <h6>Deskripsi</h6>
+              <h6>Deskripsi</h6>
+              <h6>Deskripsi</h6>
+              <h6>Deskripsi</h6>
+              <h6>Deskripsi</h6>
+              <h6>Deskripsi</h6>
+            </div>
+          </div>
+          <div class="row mt-5">
+            <div class="col-3">
+              <h5>Title</h5>
+              <h6>Deskripsi</h6>
+              <h6>Deskripsi</h6>
+              <h6>Deskripsi</h6>
+              <h6>Deskripsi</h6>
+              <h6>Deskripsi</h6>
+              <h6>Deskripsi</h6>
+            </div>
+            <div class="col-3">
+              <h5>Title</h5>
+              <h6>Deskripsi</h6>
+              <h6>Deskripsi</h6>
+              <h6>Deskripsi</h6>
+              <h6>Deskripsi</h6>
+              <h6>Deskripsi</h6>
+              <h6>Deskripsi</h6>
+            </div>
+            <div class="col-3">
+              <h5>Title</h5>
+              <h6>Deskripsi</h6>
+              <h6>Deskripsi</h6>
+              <h6>Deskripsi</h6>
+              <h6>Deskripsi</h6>
+              <h6>Deskripsi</h6>
+              <h6>Deskripsi</h6>
+            </div>
+            <div class="col-3">
+              <h5>Title</h5>
+              <h6>Deskripsi</h6>
+              <h6>Deskripsi</h6>
+              <h6>Deskripsi</h6>
+              <h6>Deskripsi</h6>
+              <h6>Deskripsi</h6>
+              <h6>Deskripsi</h6>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Akhir Kategori -->
+
+  <!-- Carause -->
+  <div id="carouselExampleAutoplaying" class="carousel slide d-flex justify-content-center" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+        aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+        aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+        aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="/assets/images/slide/slide1.webp" class="d-block w-100" alt="iklan">
+      </div>
+      <div class="carousel-item">
+        <img src="/assets/images/slide/slide2.webp" class="d-block w-100" alt="iklan">
+      </div>
+      <div class="carousel-item">
+        <img src="/assets/images/slide/slide3.webp" class="d-block w-100" alt="iklan">
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying"
+      data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying"
+      data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class=" visually-hidden">Next</span>
+    </button>
+  </div>
+  <!-- Akhir carause -->
+
+  <!-- Kategori Pilihan -->
+  <!-- WARNING!!! -->
+  <!-- ada bug di bagian pilihan kategori, tolong di fix -->
+  <!-- tolong tombol arrow nya di fix juga yaa -->
+  <!-- contohnya bisa di liat pada website tokotpedia -->
+  <!-- WARNING!!! -->
+  <div class="kategori-pilihan">
+    <div class="row mx-0 p-0">
+      <div class="col-6 mx-0">
+        <h1>Kategori Pilihan</h1>
+        <div id="carouselExample" class="carousel carousel-2 slide mt-4" data-bs-ride="carousel">
+          <div class="carousel-inner carousel-inner-2">
+
+            <div class="carousel-item active">
+              <div class="row mx-0 p-0">
+
+                <div class="col-3 ps-0 pe-2">
+                  <div class="d-flex p-0 flex-column align-items-center justify-content-center card-kategori">
+                    <img src="/assets/images/products/makanan-kering.png" alt="makanan-kering">
+                    <h2 class="mb-0">Makanan</h2>
+                    <h3 class="mb-0">Kering</h3>
+                  </div>
+                </div>
+
+                <div class="col-3 ps-0 pe-2">
+                  <div class="d-flex p-0 flex-column align-items-center justify-content-center card-kategori">
+                    <img src="/assets/images/products/makanan-kering.png" alt="makanan-kering">
+                    <h2 class="mb-0">Makanan</h2>
+                    <h3 class="mb-0">Kering</h3>
+                  </div>
+                </div>
+
+                <div class="col-3 ps-0 pe-2">
+                  <div class="d-flex p-0 flex-column align-items-center justify-content-center card-kategori">
+                    <img src="/assets/images/products/makanan-kering.png" alt="makanan-kering">
+                    <h2 class="mb-0">Makanan</h2>
+                    <h3 class="mb-0">Kering</h3>
+                  </div>
+                </div>
+
+                <div class="col-3 ps-0 pe-2">
+                  <div class="d-flex p-0 flex-column align-items-center justify-content-center card-kategori">
+                    <img src="/assets/images/products/makanan-kering.png" alt="makanan-kering">
+                    <h2 class="mb-0">Makanan</h2>
+                    <h3 class="mb-0">Kering</h3>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="carousel-item">
+              <div class="row mx-0 p-0">
+                <div class="col-3 ps-0 pe-2">
+                  <div class="d-flex p-0 flex-column align-items-center justify-content-center card-kategori">
+                    <img src="/assets/images/products/makanan-kering.png" alt="makanan-kering">
+                    <h2 class="mb-0">Makanan</h2>
+                    <h3 class="mb-0">Kering</h3>
+                  </div>
+                </div>
+                <div class="col-3 ps-0 pe-2">
+                  <div class="d-flex p-0 flex-column align-items-center justify-content-center card-kategori">
+                    <img src="/assets/images/products/makanan-kering.png" alt="makanan-kering">
+                    <h2 class="mb-0">Makanan</h2>
+                    <h3 class="mb-0">Kering</h3>
+                  </div>
+                </div>
+                <div class="col-3 ps-0 pe-2">
+                  <div class="d-flex p-0 flex-column align-items-center justify-content-center card-kategori">
+                    <img src="/assets/images/products/makanan-kering.png" alt="makanan-kering">
+                    <h2 class="mb-0">Makanan</h2>
+                    <h3 class="mb-0">Kering</h3>
+                  </div>
+                </div>
+                <div class="col-3 ps-0 pe-2">
+                  <div class="d-flex p-0 flex-column align-items-center justify-content-center card-kategori">
+                    <img src="/assets/images/products/makanan-kering.png" alt="makanan-kering">
+                    <h2 class="mb-0">Makanan</h2>
+                    <h3 class="mb-0">Kering</h3>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <button class="prev carousel-control-prev" type="button" data-bs-target="#carouselExample"
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="next carousel-control-next" type="button" data-bs-target="#carouselExample"
+            data-bs-slide="next">
+            <span class="carousel-control-next-icon" ariahidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </div>
+
+      <div class="col-6">
+        <h1>Top Up & Tagihan <span style="font-size: 20px; color: #ff4500;">Lihat Semua</span></h1>
+        <div class="row mx-0 overflow-hidden mt-4" style="border-radius: 12px; border: 1px #dfdfdf solid;">
+          <div class="d-flex justify-content-between align-items-center w-100 border-bottom">
+            <div class="item-menu w-100 h-100 d-flex align-items-center justify-content-center">
+              <span>Pulsa</span>
+            </div>
+            <div class="item-menu w-100 h-100 d-flex align-items-center justify-content-center">
+              <span>Paket Data</span>
+            </div>
+            <div class="item-menu w-100 h-100 d-flex align-items-center justify-content-center">
+              <span>Listrik PLN</span>
+            </div>
+            <div class="item-menu w-100 h-100 d-flex align-items-center justify-content-center">
+              <span>Flight</span>
+            </div>
+            <div class="item-menu d-flex px-2 align-items-center justify-content-center border-start">
+              <i class="icon-kategori-pilihan bi-three-dots-vertical"></i>
+            </div>
+          </div>
+
+          <div class="d-flex justify-content-between align-items-end p-3">
+            <div class="row mx-0 w-100">
+              <div class="input-group w-100 me-3 mb-0">
+                <label class="fw-bold">Nomor telepon</label>
+                <input type="text" name="" id="" class="form-control w-100" placeholder="081234567890">
+              </div>
+            </div>
+
+            <div class="row mx-0 w-100">
+              <div class="form-label w-100 me-3 mb-0">
+                <label for="" class="fw-bold">Nominal</label>
+                <select name="" id="" disabled="disabled" class="form-control">
+                  <option value="">15.000 - Rp.16.500</option>
+                  <option value="">25.000 - Rp.26.500</option>
+                </select>
+              </div>
+            </div>
+            <button disabled="disabled" aria-haspopup="listbox" class="btn px-3"
+              style="background-color: #e9ecef;">Beli</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="row flex-lg-nowrap mx-3 mt-3 menu-scroll">
+        <div class="col-lg-auto item-scroll d-flex align-items-center border py-1 px-3 me-2">
+          <i class="bi bi-basket"></i>
+          <span class="ms-2">Kategori</span>
+        </div>
+        <div class="col-lg-auto item-scroll d-flex align-items-center border py-1 px-3 me-2">
+          <i class="bi bi-basket"></i>
+          <span class="ms-2">Kategori</span>
+        </div>
+        <div class="col-lg-auto item-scroll d-flex align-items-center border py-1 px-3 me-2">
+          <i class="bi bi-basket"></i>
+          <span class="ms-2">Kategori</span>
+        </div>
+        <div class="col-lg-auto item-scroll d-flex align-items-center border py-1 px-3 me-2">
+          <i class="bi bi-basket"></i>
+          <span class="ms-2">Kategori</span>
+        </div>
+        <div class="col-lg-auto item-scroll d-flex align-items-center border py-1 px-3 me-2">
+          <i class="bi bi-basket"></i>
+          <span class="ms-2">Kategori</span>
+        </div>
+        <div class="col-lg-auto item-scroll d-flex align-items-center border py-1 px-3 me-2">
+          <i class="bi bi-basket"></i>
+          <span class="ms-2">Kategori</span>
+        </div>
+        <div class="col-lg-auto item-scroll d-flex align-items-center border py-1 px-3 me-2">
+          <i class="bi bi-basket"></i>
+          <span class="ms-2">Kategori</span>
+        </div>
+        <div class="col-lg-auto item-scroll d-flex align-items-center border py-1 px-3 me-2">
+          <i class="bi bi-basket"></i>
+          <span class="ms-2">Kategori</span>
+        </div>
+        <div class="col-lg-auto item-scroll d-flex align-items-center border py-1 px-3 me-2">
+          <i class="bi bi-basket"></i>
+          <span class="ms-2">Kategori</span>
+        </div>
+        <div class="col-lg-auto item-scroll d-flex align-items-center border py-1 px-3 me-2">
+          <i class="bi bi-basket"></i>
+          <span class="ms-2">Kategori</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Akhir Pilihan Kategori -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- Modal Pencarian -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content m-c-head">
+
+        <div class="d-flex justify-content-between">
+          <span class="fw-bold title">Pencarian Terakhir</span>
+          <span class="fw-bold" style="color: #d50000;">Hapus Semua</span>
+        </div>
+
+        <span class="ml-2 mt-2" style="font-size: 14px;">Celana Chinos</span>
+        <span class="ml-2 mt-2" style="font-size: 14px;">Baju Polo</span>
+        <span class="ml-2 mt-2" style="font-size: 14px;">Hoodie Oversize</span>
+
+        <span class="fw-bold mt-2 mb-2 title">Populer</span>
+        <div class="d-flex flex-wrap">
+          <button class="btn me-2">Polo Ralph Lauren</button>
+          <button class="btn me-2">Hoodie Uniqlo</button>
+          <button class="btn me-2">Short Pants H&M</button>
+        </div>
+
+      </div>
+    </div>
+  </div>
+  <!--  Akhir Modal Pencarian -->
+
+  <!-- Bootstrap -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+    crossorigin="anonymous"></script>
+
+  <!-- JAVASCRIPT -->
+  <script src="/assets/js/app.js"></script>
+</body>
+
+</html>
